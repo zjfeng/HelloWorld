@@ -1,0 +1,251 @@
+body
+{
+    font-size: 10pt;
+
+    padding: 0;
+}
+
+.topmenu
+{
+    display: block;
+
+    width: 220px;
+    margin: 0;
+    padding: 0;
+
+    border: 2px solid #e4393c;
+}
+
+.toptitle
+{
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 40px;
+
+    height: 40px;
+    padding-left: 20px;
+
+    text-align: left;
+
+    color: white;
+    background: #e4394c;
+}
+
+.topmenu li
+{
+    font-size: 11pt;
+    line-height: 30px;
+
+    z-index: 3;
+
+    height: 30px;
+    padding-left: 8px;
+
+    list-style: none;
+
+    text-align: left;
+}
+
+.topmenu li a
+{
+    text-decoration: none;
+
+    color: #313131;
+}
+
+.topmenu span
+{
+    float: right;
+
+    margin-right: 5px;
+}
+
+.topmenu li a:hover
+{
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    color: #e4393c;
+}
+
+.topmenu li:hover
+{
+    height: 60px;
+
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: 2px solid #e4393c;
+    -webkit-box-shadow: 0 0 8px #ddd;
+       -moz-box-shadow: 0 0 8px #ddd;
+            box-shadow: 0 0 8px #ddd;
+}
+
+.topmenu li:hover span
+{
+    display: none;
+}
+
+.topmenu li:hover i
+{
+    position: relative;
+    z-index: 20;
+
+    display: inline-block;
+    float: right;
+
+    width: 20px;
+    height: 60px;
+
+    background: white;
+}
+
+.submenu
+{
+    position: absolute;
+    z-index: 4;
+    top: 40px;
+    left: 220px;
+
+    display: none;
+
+    width: 715px;
+
+    border: 1px solid #ddd;
+    background: white;
+    -webkit-box-shadow: 0 0 8px #ddd;
+       -moz-box-shadow: 0 0 8px #ddd;
+            box-shadow: 0 0 8px #ddd;
+}
+
+.leftdiv
+{
+    float: left;
+
+    width: 490px;
+    margin: 5px;
+}
+
+.rightdiv
+{
+    float: left;
+
+    width: 200px;
+    margin: 5px;
+}
+
+.topmenu li:hover .submenu
+{
+    display: block;
+}
+
+.leftdiv dl
+{
+    display: block;
+    overflow: hidden;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.leftdiv dl dt
+{
+    line-height: 22px;
+
+    display: block;
+    float: left;
+
+    width: 60px;
+    height: 22px;
+    padding-right: 6px;
+
+    text-align: right;
+}
+
+.leftdiv dl dt a
+{
+    font-size: 10pt;
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    color: #e4393c;
+}
+
+.leftdiv dl dd
+{
+    display: block;
+    overflow: hidden;
+}
+
+.leftdiv dl dd a
+{
+    font-size: 9pt;
+    line-height: 14px;
+
+    display: block;
+    float: left;
+
+    height: 14px;
+    margin: 4px 0;
+    padding: 0 8px;
+
+    color: #737373;
+    border-left: 1px solid #ccc;
+}
+
+.rightdiv dl
+{
+    display: block;
+}
+
+.rightdiv dl dd
+{
+    display: inline-block;
+
+    margin: .5px 0;
+}
+
+.rightdiv dl dd img
+{
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+
+    border: 0;
+}
+
+.rightdiv .tuijian
+{
+    overflow: hidden;
+
+    width: 83px;
+    height: 35px;
+}
+
+.floatimg
+{
+    position: relative;
+    right: 320px;
+    bottom: -25px;
+}
+
+.topmenu li b
+{
+    display: none;
+}
+
+.topmenu li:hover b
+{
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 30px;
+
+    display: block;
+    overflow: hidden;
+
+    width: 180px;
+    height: 30px;
+}

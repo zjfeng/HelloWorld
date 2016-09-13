@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		#div1 {
+			width: 712px;
+			height: 108px;
+			margin: 100px auto;
+			position: relative;
+			background: red;
+			overflow: hidden;
+		}
+		
+		#div1 ul {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		
+		#div1 ul li {
+			float: left;
+			width: 178px;
+			height: 108px;
+			list-style: none;
+		}
+	</style>
+
+	<script>
+		window.onload = function() {
+			var oDiv = document.getElementById("div1");
+			var oUl = document.getElementById("ul");
+			var aLi = document.getElementsByTagName("li");
+			//将图片链接起来形成8张图片
+			oUl.innerHTML += oUl.innerHTML;
+			//定义一个定时器
+			var timer = null;
+			//计算ul的宽度
+			oUl.style.width = aLi[0].offsetWidth * aLi.length + "px";
+			//开启定时器
+			timer = setInterval(function() {
+				if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
+					oUl.style.left = "0";
+				}
+				oUl.style.left = oUl.offsetLeft - 5 + "px";
+			}, 30);
+			//鼠标移入到div内，图片应该要停止滚动
+			oDiv.onmouseover = function() {
+				//清除定时器
+				clearInterval(timer);
+			}
+			//当鼠标移出div的时候应该要继续滚动
+			oDiv.onmouseout = function() {
+				//开启定时器
+				timer = setInterval(function() {
+					if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
+						oUl.style.left = "0";
+					}
+					oUl.style.left = oUl.offsetLeft - 5 + "px";
+				}, 30);
+			}
+		}
+	</script>
+
+	<body>
+		<div id="div1">
+			<ul id="ul">
+				<li><a href="#"><img src="image/1.jpg" /></a></li>
+				<li><img src="image/2.jpg" /></li>
+				<li><img src="image/3.jpg" /></li>
+				<li><img src="image/4.jpg" /></li>
+			</ul>
+		</div>
+	</body>
+</html>

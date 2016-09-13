@@ -1,0 +1,19 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#div0 {
+	height: 250px;
+	width: 250px;
+	background: #FB3D3D;
+	left: -250px;
+	position: relative;
+}
+#div1 {
+	height: 50px;
+	width: 50px;
+	background: #467CEE;
+	margin-top: 100px;
+	position: absolute;
+	left: 250px;
+}
